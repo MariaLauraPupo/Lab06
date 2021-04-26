@@ -2,12 +2,15 @@ package it.polito.tdp.meteo.model;
 
 import java.util.List;
 
+import it.polito.tdp.meteo.DAO.MeteoDAO;
+
 public class Citta {
 	
 	
 	private String nome;
 	private List<Rilevamento> rilevamenti;
 	private int counter = 0;
+	private MeteoDAO meteodao;
 	
 	
 	
@@ -78,5 +81,13 @@ public class Citta {
 		return nome;
 	}
 	
+	/*public void riempiRilevamenti() {
+		for(Rilevamento r: meteodao.getAllRilevamenti()) {
+			if(r!=null && r.getLocalita().equals(this.nome)) {
+				rilevamenti.add(r);
+				counter++;
+			}
+		}
+	}*/
 
 }
